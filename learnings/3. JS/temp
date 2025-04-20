@@ -1,0 +1,81 @@
+<!-- <style>
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        border: 3px solid black;
+        padding: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input, select {
+        width: 300px;
+        margin: 5px;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input:focus, select:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    label {
+        color: #333;
+        font-weight: bold;
+    }
+    label:focus {
+        transform: translateY(-15px);
+        color: #007bff;
+        overflow-y: visible;
+    }
+    input[type="button"] {
+        width: 150px;
+        margin: 5px;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="button"]:hover {
+        background-color: #0056b3;
+    }
+    input[type="button"]:active {
+        transform: translateY(2px);
+    }
+    select {
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .result {
+        color: #007bff;
+        font-weight: bold;
+    }
+</style>
+<div class="container">
+    <label>First Value:</label>
+    <input type="text" placeholder="First Value" style="background-color: #ffe6cc"><br>
+    <label>Second Value:</label>
+    <input type="text" placeholder="Second Value" style="background-color: #c6efce"><br>
+    <label>Operation:</label><br>
+    <select name="opt" id="opt" style="background-color: #ff99cc">
+        <option hidden value="select operation">Select Option</option>
+        <option value="add">Addition</option>
+        <option value="sub">Substraction</option>
+        <option value="mul">Multiplication</option>
+        <option value="div">Division</option>
+    </select><br>
+    <label>Result:</label><br>
+    <input type="text" placeholder="Result" class="result" style="background-color: #ffffcc"><br>
+    <input type="button" value="Calculate" onclick="MyCal()" style="background-color: #ff9900">
+</div>
+    </style> -->

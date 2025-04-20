@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Form Template</h1>
+        <hr>
+        <form>
+            <!-- Section 1: Contact Information -->
+            <h2>Contact Information</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" name="linkedin" required>
+            </div>
+
+            <!-- Section 2: Professional Summary -->
+            <h2>Professional Summary</h2>
+            <div class="form-group">
+                <label for="summary">Summary:</label>
+                <textarea id="summary" name="summary" required></textarea>
+            </div>
+
+            <!-- Section 3: Skills -->
+            <h2>Skills</h2>
+            <div class="form-group" id="form-group-1">
+                    <label for="skill-1">Skill:</label>
+                    <input type="text" id="skill-1" name="skill[]" required>
+                <button type="button" id="add-skill-btn" onclick="addSkill()">Add Skill</button>
+            </div>
+
+            <!-- Section 4: Work History -->
+             <hr>
+            <h2>Work History</h2>
+            <div class="form-group" id="form-group-2">
+                <label for="company-name">Company Name:</label>
+                <input type="text" id="company-name" name="company-name" required>
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" name="job-title" required>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" name="duration" required>
+                <label for="responsibilities">Responsibilities:</label>
+                <textarea id="responsibilities" name="responsibilities" required></textarea>
+                <!-- add work history button -->
+                <button id="add-work-history-btn" type="button">Add Work History</button>
+            </div>
+
+            <!-- Section 5: Education -->
+             <hr>
+            <h2>Education</h2>
+            <div class="form-group" id="form-group-3">
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" required>
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" name="institution" required>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                <label for="expected-graduation-date">Passing Year:</label>
+                <input type="date" id="expected-graduation-date" name="expected-graduation-date" required>
+
+                <button id="add-education-btn" type="button">Add Education</button>
+            </div>
+
+            <!-- Section 6: Certifications -->
+             <hr>
+            <div class="form-group" id="form-group-4">
+                <label for="certification-name">Certification Name:</label>
+                <input type="text" id="certification-name" name="certification-name" required>
+                <label for="issuing-organization">Issuing Organization:</label>
+                <input type="text" id="issuing-organization" name="issuing-organization" required>
+                <label for="certification-date">Date:</label>
+                <input type="date" id="certification-date" name="certification-date" required>
+
+                <button id="add-certification-btn" type="button">Add Certification</button>
+            </div>
+
+            <!-- Section 7: Websites, Portfolios, Profiles -->
+            <h2>Websites, Portfolios, Profiles</h2>
+            <div class="form-group">
+                <label for="portfolio">Portfolio:</label>
+                <input type="url" id="portfolio" name="portfolio" required>
+                <label for="github-profile">GitHub Profile:</label>
+                <input type="url" id="github-profile" name="github-profile" required>
+            </div>
+
+            <!-- Section 8: Additional Information -->
+            <h2>Additional Information</h2>
+            <div class="form-group">
+                <label for="additional-info">Any additional information you'd like to include:</label>
+                <textarea id="additional-info" name="additional-info"></textarea>
+            </div>
+
+
+            <button type="submit">Submit</button>
+            <!-- <button type="submit">preview</button> -->
+        </form>
+    </div>
+    
+
+    </div>
+    <script src="script.js"></script>
+    <script src="resume.js"></script>
+</body>
+
+</html>

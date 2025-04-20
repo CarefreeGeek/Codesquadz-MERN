@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div
+        style="width: 800px; margin: 40px auto; padding: 20px; background-color: #f0f0f0; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h1 style="text-align: center; margin-bottom: 20px;">John Doe</h1>
+        <h2 style="text-align: center; margin-bottom: 20px;">Software Engineer</h2>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <div>
+                <h3 style="margin-bottom: 10px;">Contact Information</h3>
+                <p style="margin-bottom: 10px;">Email: <a href="mailto:johndoe@example.com"
+                        style="text-decoration: none; color: #337ab7;">johndoe@example.com</a></p>
+                <p style="margin-bottom: 10px;">Phone: 123-456-7890</p>
+                <p style="margin-bottom: 10px;">LinkedIn: <a href="https://www.linkedin.com/in/johndoe"
+                        style="text-decoration: none; color: #337ab7;">linkedin.com/in/johndoe</a></p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 10px;">Summary</h3>
+                <p style="margin-bottom: 10px;">Highly motivated and experienced software engineer with a strong passion
+                    for developing innovative solutions.</p>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px;">Technical Skills</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 10px;">Programming languages: Java, Python, JavaScript</li>
+                <li style="margin-bottom: 10px;">Development frameworks: Spring, Django, React</li>
+                <li style="margin-bottom: 10px;">Databases: MySQL, MongoDB, PostgreSQL</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px;">Work Experience</h3>
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px;">Software Engineer, ABC Company (2020-Present)</h4>
+                <p style="margin-bottom: 10px;">Developed multiple web applications using Java and Spring framework.</p>
+                <p style="margin-bottom: 10px;">Collaborated with cross-functional teams to design and implement new
+                    features.</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px;">Junior Software Engineer, DEF Company (2018-2020)</h4>
+                <p style="margin-bottom: 10px;">Contributed to the development of a cloud-based project using Python and
+                    Django framework.</p>
+                <p style="margin-bottom: 10px;">Participated in code reviews and ensured high-quality code standards.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px;">Education</h3>
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px;">Bachelor of Science in Computer Science, XYZ University (2015-2019)
+                </h4>
+                <p style="margin-bottom: 10px;">Coursework: Data Structures, Algorithms, Computer Systems, Web
+                    Development.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+                // Select all elements that need to be updated
+        const elementsToUpdate = document.querySelectorAll([
+        'h1', // Name
+        'h2', // Profession
+        'h3', // Section headings (Contact Information, Summary, Technical Skills, Work Experience, Education)
+        'p', // Paragraphs containing information (Contact Information, Summary, Work Experience, Education)
+        'a', // Links (Email, LinkedIn)
+        'li', // List items (Technical Skills)
+        'h4' // Work Experience and Education headings
+        ]);
+
+        // Log the selected elements to the console
+        console.log(elementsToUpdate);
+    </script>
+</body>
+
+</html>

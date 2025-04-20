@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+.header p {
+    margin: 5px 0;
+}
+.header a {
+    color: #000;
+    text-decoration: none;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.skills ul {
+    list-style: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills ul li {
+    width: 50%;
+}
+.work-history, .education, .certifications, .websites {
+    margin-bottom: 20px;
+}
+.work-history ul, .education ul, .certifications ul, .websites ul {
+    list-style: none;
+    padding: 0;
+}
+.work-history ul li, .education ul li, .certifications ul li, .websites ul li {
+    margin-bottom: 10px;
+}
+.work-history ul li p, .education ul li p, .certifications ul li p, .websites ul li p {
+    margin: 5px 0;
+}
+.websites ul li a {
+    color: #000;
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .skills ul li {
+        width: 100%;
+    }
+}

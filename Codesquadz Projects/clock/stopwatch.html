@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stapwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="stopwatch-container">
+        <div class="stopwatch">
+            <h1 class="heading-stopwatch">Stopwatch</h1>
+        </div>
+        <hr>
+        <div class="stopwatch-display">
+            <span id="stopwatch-hours">0</span>:
+            <span id="stopwatch-minutes">0</span>:
+            <span id="stopwatch-seconds">0</span>
+        </div>
+        <hr>
+        <div class="stopwatch-controls">
+            <button id="start-button" onclick="startStopwatch()">Start</button>
+            <button id="stop-button" onclick="stopStopwatch()">Stop</button>
+            <button id="reset-button" onclick="resetStopwatch()">Reset</button>
+        </div>
+    </div>
+    <script>
+
+
+        var stopwatchDisplay = document.querySelectorAll('.stopwatch-display > span');
+        console.log(stopwatchDisplay)
+        var startButton = document.getElementById('start-button');
+        var stopButton = document.getElementById('stop-button');
+        var resetButton = document.getElementById('reset-button');
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        function show(){
+            stopwatchDisplay[0].textContent = hours;
+            stopwatchDisplay[1].textContent = minutes;
+            stopwatchDisplay[2].textContent = seconds;
+        }
+
+        function startStopwatch() {
+            intervalTime = setInterval(() => {
+                seconds++;
+                if (seconds === 60) {
+                    minutes++;
+                    seconds = 0;
+                }
+                if (minutes === 60) {
+                    hours++;
+                    minutes = 0;
+                }
+                show()
+            }, 1000);
+            startButton.setAttribute('disabled', 'disabled')
+            stopButton.removeAttribute('disabled')
+        }
+
+
+        function stopStopwatch() {
+            clearInterval(intervalTime);
+            show()
+            stopButton.setAttribute('disabled', 'disabled')
+            startButton.removeAttribute('disabled')
+        }
+
+        function resetStopwatch() {
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            stopStopwatch();
+        }
+    </script>
+
+</body>
+
+</html>

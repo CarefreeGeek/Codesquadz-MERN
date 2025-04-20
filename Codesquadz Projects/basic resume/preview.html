@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Preview</title>
+  <style>
+    /* body { font-family: sans-serif; padding: 20px; } */
+    /* h2 { border-bottom: 1px solid #000; } */
+    .section { margin-bottom: 20px; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+  
+    h1 {
+      font-size: 36px;
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #007BFF;
+    }
+  
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      color: #343a40;
+    }
+  
+    .section {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+  
+    p {
+      margin: 5px 0;
+    }
+  
+    strong {
+      color: #495057;
+    }
+  
+    ul {
+      padding-left: 20px;
+    }
+  
+    ul li {
+      margin-bottom: 5px;
+      list-style-type: disc;
+    }
+  
+    @media print {
+      body {
+        background: white;
+        color: black;
+        box-shadow: none;
+      }
+      .section {
+        background: white;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+      h1, h2 {
+        color: black;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>Your Resume Preview</h1>
+  <div id="preview"></div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("resumeData"));
+    const preview = document.getElementById("preview");
+
+    function createSection(title, content) {
+      const section = document.createElement("div");
+      section.className = "section";
+      section.innerHTML = `<h2>${title}</h2>${content}`;
+      return section;
+    }
+
+    if (data) {
+      preview.appendChild(createSection("Contact Information", `
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Address:</strong> ${data.address}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>LinkedIn:</strong> ${data.linkedin}</p>
+      `));
+
+      preview.appendChild(createSection("Professional Summary", `<p>${data.summary}</p>`));
+
+      if (data.skill && data.skill.length) {
+        preview.appendChild(createSection("Skills", `<ul>${data.skill.map(skill => `<li>${skill}</li>`).join("")}</ul>`));
+      }
+
+      preview.appendChild(createSection("Work History", `
+        <p><strong>Company:</strong> ${data["company-name"]}</p>
+        <p><strong>Job Title:</strong> ${data["job-title"]}</p>
+        <p><strong>Location:</strong> ${data.location}</p>
+        <p><strong>Duration:</strong> ${data.duration}</p>
+        <p><strong>Responsibilities:</strong> ${data.responsibilities}</p>
+      `));
+
+      preview.appendChild(createSection("Education", `
+        <p><strong>Degree:</strong> ${data.degree}</p>
+        <p><strong>Institution:</strong> ${data.institution}</p>
+        <p><strong>Location:</strong> ${data.location}</p>
+        <p><strong>Passing Year:</strong> ${data["expected-graduation-date"]}</p>
+      `));
+
+      preview.appendChild(createSection("Certifications", `
+        <p><strong>Certificate:</strong> ${data["certification-name"]}</p>
+        <p><strong>Issuer:</strong> ${data["issuing-organization"]}</p>
+        <p><strong>Date:</strong> ${data["certification-date"]}</p>
+      `));
+
+      preview.appendChild(createSection("Web Profiles", `
+        <p><strong>Portfolio:</strong> ${data.portfolio}</p>
+        <p><strong>GitHub:</strong> ${data["github-profile"]}</p>
+      `));
+
+      preview.appendChild(createSection("Additional Info", `<p>${data["additional-info"] || "N/A"}</p>`));
+    } else {
+      preview.innerHTML = "<p>No data found. Please go back and fill the form.</p>";
+    }
+  </script>
+</body>
+</html>

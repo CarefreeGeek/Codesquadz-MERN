@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 250px;
+            width: 350px;
+            padding: 10px;
+            position: relative;
+            margin: 15px;
+            border: 2px solid black;
+        }
+
+        
+        .box2{
+            bottom: 250px;
+            left: 35px;
+            z-index: 1;
+            animation: hover 1 ease-in-out;
+        }
+
+        .box3{
+            bottom: 500px;
+            left: 70px;
+            z-index: 2;
+        }
+        
+        .box4{
+            bottom: 750px;
+            left: 105px;
+            z-index: 3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: rgb(250, 235, 215);" class="box box1"></div>
+        <div style="background-color: rgb(255, 145, 0);" class="box box2"></div>
+        <div style="background-color: rgb(59, 101, 215);" class="box box3"></div>
+        <div style="background-color: rgb(73, 203, 46);" class="box box4"></div>
+    </div>
+</body>
+</html>

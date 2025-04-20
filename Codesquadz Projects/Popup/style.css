@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.popup-card-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popup-card-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%;
+}
+
+.popup-card-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.popup-card-content {
+    padding: 20px;
+}
+
+.popup-card-content h3 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.popup-card-content a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.popup-card-content a:hover {
+    color: #23527c;
+}
+
+.popup-card-footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.popup-card-footer button {
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #23527c;
+}
+
+.btn-secondary {
+    background-color: #f7f7f7;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #e7e7e7;
+}
+
+.close-button {
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close-button button {
+    position: relative;
+    cursor: pointer;
+    top: -20px;
+    left: 480px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+.close-button:hover {
+    color: #337ab7;
+    cursor: pointer;
+}

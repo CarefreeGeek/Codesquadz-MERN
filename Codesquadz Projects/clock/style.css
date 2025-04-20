@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #130537;
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 80vw;
+  height: 60vh;
+  margin: 20vh auto;
+  background-color: rgb(92, 82, 222);
+  box-shadow: 0 0 10px rgba(232, 224, 224, 0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container:hover {
+  box-shadow: 0 0 20px rgba(206, 197, 197, 0.8);
+}
+
+.clock,
+.time-container,
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.clock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.time-container {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.btn-container {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.btn-container button {
+  cursor: pointer;
+  display: flex;
+  padding: 5px 12px;
+  font-size: large;
+  color: rgb(0, 245, 20);
+  border: 2px solid rgb(0, 0, 247);
+  border-radius: 34px;
+  background-color: rgb(112, 56, 255);
+  font-weight: 600;
+  /* transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1); */
+}
+
+.time-container span {
+  margin: 0 10px;
+}
+
+.timebox.hide {
+  transform: translateX(-100%);
+}
+
+.stopwatch-container {
+  margin: 10vh auto;
+  width: 60vw;
+  height: 60vh;
+  background-color: #cd7171;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.stopwatch {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stopwatch-display {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stopwatch-controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.stopwatch-container button {
+  width: 80px;
+  height: 40px;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.stopwatch-container button:hover {
+  background-color: #555;
+}
+
+#start-button {
+  background-color: #0f0;
+}
+
+#stop-button {
+  background-color: #f00;
+}
+
+#reset-button {
+  background-color: #00f;
+}

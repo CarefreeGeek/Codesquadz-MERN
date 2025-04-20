@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="timebox">
+
+            <div class="clock">
+                <h1 class="heading-clock">Clock</h1>
+            </div>
+            <div class="date">
+                <p id="date" class="date"></p>
+            </div>
+            <hr>
+            <div class="time-container">
+                <span id="hours">
+                </span>
+                :
+                <span id="minutes">
+                </span>
+                :
+                <span id="seconds">
+                </span>
+                <span id="ampm">
+                </span>
+            </div>
+            <hr>
+            <div class="btn-container">
+                <div class="popup1">
+                    <button>Clock</button>
+                </div>
+                <div class="popup2">
+                    <button onclick="showStopwatch()">Stopwatch</button>
+                </div>
+                <div class="popup3">
+                    <button>Timer</button>
+                </div>
+            </div>
+        </div>
+        <div class="stopwatchbox" style="display: none;">
+            <div class="stopwatch">
+              <h1 class="heading-stopwatch">Stopwatch</h1>
+            </div>
+            <hr>
+            <div class="stopwatch-container">
+              <span id="stopwatch-hours">00</span>:
+              <span id="stopwatch-minutes">00</span>:
+              <span id="stopwatch-seconds">00</span>:
+              <span id="stopwatch-milliseconds">000</span>
+            </div>
+            <hr>
+            <div class="stopwatch-btn-container">
+              <div class="popup1">
+                <button>Start</button>
+              </div>
+              <div class="popup1">
+                <button>Stop</button>
+              </div>
+              <div class="popup1">
+                <button>Reset</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dynamic Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f3;
+      padding: 20px;
+    }
+    #resume {
+      background-color: #fff;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    p {
+      margin: 6px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    #summary {
+        display: flex;
+    }
+  </style>
+</head>
+<body>
+
+<div id="resume">
+  <h2>Dynamic Resume</h2>
+  <div id="output"></div>
+</div>
+
+<script>
+
+  const name = prompt("Full Name:");
+  const age = parseInt(prompt("Age:"));
+  const email = prompt("Email:");
+  const phone = prompt("Phone:");
+  const city = prompt("City:");
+  const summary = prompt("Short professional summary:");
+
+  const educationDegree = prompt("Highest Degree:");
+  const educationInstitute = prompt("Institute Name:");
+  const educationYear = prompt("Year of Completion:");
+
+  const jobTitle = prompt("Current/Last Job Title:");
+  const company = prompt("Company Name:");
+  const jobDuration = prompt("Duration (e.g., 2022-2024):");
+  const jobDesc = prompt("Job Responsibilities (comma separated):").split(',');
+
+  const skills = prompt("Enter your skills (comma separated):").split(',');
+  const projects = prompt("Project Names (comma separated):").split(',');
+
+  const resume = {
+    personal: {
+      name,
+      age,
+      email,
+      phone,
+      city,
+      summary
+    },
+    education: {
+      degree: educationDegree,
+      institute: educationInstitute,
+      year: educationYear
+    },
+    experience: {
+      title: jobTitle,
+      company: company,
+      duration: jobDuration,
+      responsibilities: jobDesc
+    },
+    skills: skills,
+    projects: projects
+  };
+
+
+  const resumeHTML = `
+    <div class="section">
+      <h3>About</h3>
+      <p><strong>Name:</strong> ${resume.personal.name}</p>
+      <p><strong>Age:</strong> ${resume.personal.age}</p>
+      <p><strong>Email:</strong> ${resume.personal.email}</p>
+      <p><strong>Phone:</strong> ${resume.personal.phone}</p>
+      <p><strong>Location:</strong> ${resume.personal.city}</p>
+      <p id="summary"><strong>Summary:</strong> ${resume.personal.summary}</p>
+    </div>
+
+    <div class="section">
+      <h3>Education</h3>
+      <p><strong>Degree:</strong> ${resume.education.degree}</p>
+      <p><strong>Institute:</strong> ${resume.education.institute}</p>
+      <p><strong>Year:</strong> ${resume.education.year}</p>
+    </div>
+
+    <div class="section">
+      <h3>Experience</h3>
+      <p><strong>Position:</strong> ${resume.experience.title}</p>
+      <p><strong>Company:</strong> ${resume.experience.company}</p>
+      <p><strong>Duration:</strong> ${resume.experience.duration}</p>
+      <p><strong>Responsibilities:</strong></p>
+      <ul>${resume.experience.responsibilities.map(task => `<li>${task.trim()}</li>`).join('')}</ul>
+    </div>
+
+    <div class="section">
+      <h3>Skills</h3>
+      <ul>${resume.skills.map(skill => `<li>${skill.trim()}</li>`).join('')}</ul>
+    </div>
+
+    <div class="section">
+      <h3>Projects</h3>
+      <ul>${resume.projects.map(project => `<li>${project.trim()}</li>`).join('')}</ul>
+    </div>
+  `;
+
+  document.getElementById("output").innerHTML = resumeHTML;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Admission Form</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>School Admission Form</h2>
+    <form id="admissionForm" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" />
+        <div class="error" id="error-name"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" />
+        <div class="error" id="error-email"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone*</label>
+        <input type="text" id="phone" />
+        <div class="error" id="error-phone"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth*</label>
+        <input type="date" id="dob" />
+        <div class="error" id="error-dob"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender*</label>
+        <select id="gender">
+          <option value="">-- Select Gender --</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <div class="error" id="error-gender"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="grade">Grade Applying For*</label>
+        <select id="grade">
+          <option value="">-- Select Grade --</option>
+          <option>Nursery</option>
+          <option>KG</option>
+          <option>1st</option>
+          <option>2nd</option>
+          <option>3rd</option>
+          <option>4th</option>
+          <option>5th</option>
+        </select>
+        <div class="error" id="error-grade"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address*</label>
+        <textarea id="address"></textarea>
+        <div class="error" id="error-address"></div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

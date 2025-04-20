@@ -1,0 +1,41 @@
+/* Positioning in CSS */
+
+/* 
+  The position property in CSS is used to specify the positioning scheme of an element. 
+  It can take one of the following values: static, relative, absolute, fixed, or sticky.
+*/
+
+/* 
+  1. Static Positioning: 
+  The default positioning scheme for elements is static. 
+  Elements with static positioning are not affected by the top, right, bottom, or left properties.
+*/
+position: static;
+
+/* 
+  2. Relative Positioning: 
+  An element with relative positioning is positioned relative to its normal position. 
+  The top, right, bottom, and left properties can be used to offset the element from its normal position.
+*/
+position: relative;
+
+/* 
+  3. Absolute Positioning: 
+  An element with absolute positioning is positioned relative to its nearest positioned ancestor. 
+  The top, right, bottom, and left properties can be used to offset the element from its nearest positioned ancestor.
+*/
+position: absolute;
+
+/* 
+  4. Fixed Positioning: 
+  An element with fixed positioning is positioned relative to the viewport. 
+  The top, right, bottom, and left properties can be used to offset the element from the viewport.
+*/
+position: fixed;
+
+/* 
+  5. Sticky Positioning: 
+  An element with sticky positioning is positioned relative to its nearest positioned ancestor, 
+  but it also sticks to the viewport when the user scrolls.
+*/
+position: sticky;
